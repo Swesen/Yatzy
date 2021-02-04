@@ -15,7 +15,16 @@ namespace Yatzy
             scoreboard = new int[numberOfPlayers, 16];
 
             // ask eatch player for their name
-
+            for(int i = 0; i < numberOfPlayers; i++)
+            {
+                Console.WriteLine("Player name: ");
+                playerNames[i] = Console.ReadLine();
+            }
+            Console.WriteLine("Players in this game:");
+            for(int i = 0; i < numberOfPlayers; i++)
+            {
+                Console.WriteLine(playerNames[i]);
+            }
             // enter game loop
 
             // print result and ask for a rematch with same players or new players
@@ -32,6 +41,7 @@ namespace Yatzy
             }
 
             return 0; // error in player input handle in main
+            //Martin was here
 
         }
 
