@@ -7,7 +7,7 @@ namespace Yatzy
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Console.WriteLine("MARTIN TESTAR PÅ WINDOWS!");
+            Console.WriteLine("Martin!");
         }
     }
 }
