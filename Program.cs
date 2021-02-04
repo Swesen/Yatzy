@@ -4,12 +4,15 @@ namespace Yatzy
 {
     class Program
     {
+        static string[] playerNames;
+        static int[,] scoreboard;
+
         static void Main(string[] args)
         {
             int numberOfPlayers = AskForNumberOfPlayers();
 
-            string[] playerNames = new string[numberOfPlayers];
-            int[,] scoreboard = new int[numberOfPlayers, 16];
+            playerNames = new string[numberOfPlayers];
+            scoreboard = new int[numberOfPlayers, 16];
 
             // ask eatch player for their name
             for(int i = 0; i < numberOfPlayers; i++)
@@ -47,6 +50,11 @@ namespace Yatzy
             return 0; // error in player input handle in main
             //Martin was here
 
+        }
+
+        static void UpdatePlayerScore(int player, int scoreLine)
+        {
+            
         }
     }
 }
