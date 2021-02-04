@@ -4,17 +4,36 @@ namespace Yatzy
 {
     class Program
     {
+        static string[] playerNames;
+        static int[,] scoreboard;
+
         static void Main(string[] args)
         {
             int numberOfPlayers = AskForNumberOfPlayers();
 
-            string[] playerNames = new string[numberOfPlayers];
-            int[,] scoreboard = new int[numberOfPlayers, 16];
+            playerNames = new string[numberOfPlayers];
+            scoreboard = new int[numberOfPlayers, 16];
 
             // ask eatch player for their name
-
+            for(int i = 0; i < numberOfPlayers; i++)
+            {
+                Console.WriteLine("Player name: ");
+                playerNames[i] = Console.ReadLine();
+            }
+          
+            Console.WriteLine("Players in this game:");
+            for(int i = 0; i < numberOfPlayers; i++)
+            {
+                Console.WriteLine(playerNames[i]);
+            }
+            
+            int[] dice = new int[5];
             // enter game loop
+            while (true)
+            {
+                Console.WriteLine(dice);
 
+            }
             // print result and ask for a rematch with same players or new players
 
         }
@@ -30,6 +49,7 @@ namespace Yatzy
             }
 
             return 0; // error in player input handle in main
+            //Martin was here
 
         }
 
@@ -45,5 +65,9 @@ namespace Yatzy
             return outputArray;
         }
 
+        static void UpdatePlayerScore(int player, int scoreLine)
+        {
+            
+        }
     }
 }
