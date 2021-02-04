@@ -9,6 +9,7 @@ namespace Yatzy
             Console.WriteLine("Hello World!");
             Console.WriteLine("Martin!");
             Console.WriteLine("Martin!");
+            Console.WriteLine("Martin!");
         }
     }
 }
