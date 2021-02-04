@@ -6,10 +6,8 @@ namespace Yatzy
     {
         // rules
         private const int turns = 3;
-
-        static string[] playerNames;
         static string[] scoreboardNames = new string[]
-        {
+                {
             "Ones",
             "Twoes",
             "Threes",
@@ -26,7 +24,9 @@ namespace Yatzy
             "Full straight",
             "Chanse",
             "Yatzy (50)"
-        };
+                };
+
+        static string[] playerNames;
         static int[,] scoreboard;
 
         static void Main(string[] args)
@@ -68,7 +68,7 @@ namespace Yatzy
                 {
                     int[] dice = new int[5];
                     int[] savedDice = new int[0];
-                    
+
                     for (int turn = 0; turn < turns; turn++)
                     {
                         // print out current player name and scoreboard
