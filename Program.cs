@@ -17,13 +17,20 @@ namespace Yatzy
                 Console.WriteLine("Player name: ");
                 playerNames[i] = Console.ReadLine();
             }
+          
             Console.WriteLine("Players in this game:");
             for(int i = 0; i < numberOfPlayers; i++)
             {
                 Console.WriteLine(playerNames[i]);
             }
+            
+            int[] dice = new int[5];
             // enter game loop
+            while (true)
+            {
+                Console.WriteLine(dice);
 
+            }
             // print result and ask for a rematch with same players or new players
         }
 
