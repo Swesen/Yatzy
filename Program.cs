@@ -25,7 +25,7 @@ namespace Yatzy
             }
             
             int[] dice = new int[5];
-            // enter game loop
+            // enter game loopp
             while (true)
             {
                 Console.WriteLine(dice);
