@@ -12,9 +12,13 @@ namespace Yatzy
             int[,] scoreboard = new int[numberOfPlayers, 16];
 
             // ask eatch player for their name
-
+            int[] dice = new int[5];
             // enter game loop
+            while (true)
+            {
+                Console.WriteLine(dice);
 
+            }
             // print result and ask for a rematch with same players or new players
         }
 
