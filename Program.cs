@@ -29,11 +29,7 @@ namespace Yatzy
             
             int[] dice = new int[5];
             // enter game loop
-            while (true)
-            {
-                Console.WriteLine(dice);
-
-            }
+            
             // print result and ask for a rematch with same players or new players
 
         }
@@ -49,8 +45,6 @@ namespace Yatzy
             }
 
             return 0; // error in player input handle in main
-            //Martin was here
-
         }
 
         static int[] RandomDice(int amountOfDices)
@@ -65,9 +59,9 @@ namespace Yatzy
             return outputArray;
         }
 
-        static void UpdatePlayerScore(int player, int scoreLine)
+        static void UpdatePlayerScore(int player, int scoreLine, int score)
         {
-            
+            scoreboard[player, scoreLine] = score;
         }
     }
 }
