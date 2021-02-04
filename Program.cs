@@ -35,6 +35,7 @@ namespace Yatzy
 
             }
             // print result and ask for a rematch with same players or new players
+
         }
 
         static int AskForNumberOfPlayers()
@@ -50,6 +51,18 @@ namespace Yatzy
             return 0; // error in player input handle in main
             //Martin was here
 
+        }
+
+        static int[] RandomDice(int amountOfDices)
+        {
+            Random rnd = new Random();
+            int[] outputArray = new int[amountOfDices];
+
+            for (int i = 0; i < amountOfDices; i++)
+            {
+                outputArray[i] = rnd.Next(1, 6);
+            }
+            return outputArray;
         }
 
         static void UpdatePlayerScore(int player, int scoreLine)
