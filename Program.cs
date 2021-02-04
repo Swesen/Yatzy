@@ -6,7 +6,10 @@ namespace Yatzy
     {
         static void Main(string[] args)
         {
-            // program entry ask players for the number of players
+            int numberOfPlayers = AskForNumberOfPlayers();
+
+            string[] playerNames = new string[numberOfPlayers];
+            int[,] scoreboard = new int[numberOfPlayers, 16];
 
             // ask eatch player for their name
 
