@@ -67,14 +67,51 @@ namespace Yatzy
                 for (int player = 0; player < playerNames.Length; player++)
                 {
                     int[] dice = new int[5];
-                    // print out current player name and scoreboard
+                    int[] savedDice = new int[0];
+                    
                     for (int turn = 0; turn < turns; turn++)
                     {
+                        // print out current player name and scoreboard
+                        Console.Clear();
+                        PrintPlayerScoreboard(player);
+
+                        savedDice.CopyTo(dice, 0);
+                        RandomDice(5 - savedDice.Length).CopyTo(dice, savedDice.Length);
+
                         // roll dice then ask which to keep
+                        Console.WriteLine("\nDice: " + string.Join(" ", dice));
+
+                        if (turn < 2)
+                        {
+                            Console.Write("What dice do you want to save? ");
+                            string input = Console.ReadLine(); // expeted input format example: 2 3 5
+                            string[] selectedDice = input.Split(" ");
+                            savedDice = new int[selectedDice.Length];
+
+
+                            for (int d = 0; d < selectedDice.Length; d++)
+                            {
+                                int.TryParse(selectedDice[d], out int diceToSave);
+                                savedDice[d] = dice[diceToSave - 1];
+                            }
+                        }
                     }
 
+                    Console.WriteLine("What result do you want to write down? ");
+                    // check for valid options that are not filled for saving score
+                    // print list of valid options
+                    Console.ReadLine();
                     // let player choose from a list of possible places to place dice rolls result
                 }
+            }
+        }
+
+        private static void PrintPlayerScoreboard(int player)
+        {
+            Console.WriteLine($"Current player: {playerNames[player]}\n");
+            for (int s = 0; s < scoreboardNames.Length; s++)
+            {
+                Console.WriteLine($"{scoreboardNames[s]}: {scoreboard[player, s]}");
             }
         }
 
