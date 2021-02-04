@@ -8,6 +8,7 @@ namespace Yatzy
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("konstigswe");
+            Console.WriteLine("konstigswe");
         }
     }
 }
